@@ -13,8 +13,8 @@ st.write(
 # -------------------------------
 # Backend Configuration
 # -------------------------------
-BACKEND_URL = "http://127.0.0.1:8000/predict"  # Flask backend URL
-
+# BACKEND_URL = "http://127.0.0.1:8000/predict"  # Flask backend URL
+BACKEND_URL = st.secrets["general"]["BACKEND_URL"] if "general" in st.secrets else "http://127.0.0.1:8000/predict"
 # -------------------------------
 # Input Section
 # -------------------------------
